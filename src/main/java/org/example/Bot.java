@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.MenuButton.*;
+import org.example.Send.SendPhotoClass;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
@@ -12,7 +13,7 @@ public class Bot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "6954489310:AAEgCsma0lGX09Goza2N6ce6bdK-okyLQJk";
+        return "7257958469:AAFs0xvhWVHrkFfsrPt_n8HXpk3pWQTUIRI";
     }
 
     @Override
@@ -41,6 +42,12 @@ public class Bot extends TelegramLongPollingBot {
                 SousMenu.SousMenuMethod(chatId);
             }else if(text.equals("Biz haqimizda \uD83D\uDC68\u200D\uD83D\uDCBB")){
                 AboutMe.AboutMeMenuMethod(chatId);
+            }else if(text.equals("Vegetarian \uD83C\uDF55")){
+                String PizzaInfo = "<i><b>Vegetarian pizza</b></i> can be a healthier choice than meat pizza because it's often packed with vitamins, minerals, and fiber, while meat is usually higher in fat and calories. Here's some information about vegetarian pizza: \n\n <b>20 sm</b> - 80 ming so'm \n <b>30 sm</b> - 90 ming so'm \n <b>40 sm</b> - 100 ming so'm";
+                String url = "img/Pizza/1.jpg";
+                SendPhotoClass.SendPhotoMethod(chatId, PizzaInfo, url);
+            }else if(text.equals("20 sm")){
+                MyTelegramBot.Count(update);
             }
         }
     }
