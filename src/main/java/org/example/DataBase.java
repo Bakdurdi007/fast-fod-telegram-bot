@@ -1,8 +1,10 @@
 package org.example;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class DataBase {
-    public static Map<String, Integer> userCountMap = new HashMap<>();
+    public static HashMap<String, String> ProductName = new HashMap<>();
+    public static HashMap<String, Integer> ProductCount = new HashMap<>();
+    public static HashMap<String, Long> ProductCost = new HashMap<>();
+    public static HashMap<String, String> OrderDataTime = new HashMap<>();
 }
